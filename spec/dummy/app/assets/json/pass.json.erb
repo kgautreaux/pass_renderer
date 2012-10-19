@@ -1,0 +1,93 @@
+{
+  "formatVersion" : <%= @pass.format_version %>,
+  "passTypeIdentifier" : "<%= @pass.pass_type_identifier %>",
+  "serialNumber" : "<%= @pass.serial_number %>",
+  "webServiceURL" : "<%= @pass.webservice_url %>",
+  "authenticationToken" : "<%= @pass.authentication_token %>",
+  "teamIdentifier" : "<%= @pass.team_identifier %>",
+  "locations" : <%= @pass.locations %>,
+  "barcode" : <%= @pass.barcode %>,
+  "organizationName" : "<%= @pass.organization_name %>",
+  "description" : "<%= @pass.description %>",
+  "logoText" : "<%= @pass.logo_text %>",
+  "foregroundColor" : "rgb(0, 0, 0)",
+  "backgroundColor" : "rgb(200,200,200)",
+  "generic" : {
+    "headerFields" : [
+      {
+        "key": "headerDrugName",
+        "value": "<%= @pass.name %>"
+      }
+    ],
+    "primaryFields" : [
+      {
+        "key" : "primaryDrugName",
+        "value" : "<%= @pass.name.capitalize %>\n<%= @pass.dose %><%= @pass.units %>",
+        "changeMessage" : "Dose for <%= @pass.name %> changed to %@."
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "directions",
+        "label" : "Directions",
+        "changeMessage" : "Directions for <%= @pass.name %> changed to %@.",
+        "value" : "<%= @pass.directions %>"
+      }
+    ],
+    "backFields" : [
+      {
+        "key" : "category",
+        "label" : "Category",
+        "value" : "<%= @pass.category %>"
+      },
+      {
+        "key": "rationale",
+        "label": "Why am I taking this?",
+        "value": "<%= @pass.rationale %>"
+      },
+      {
+        "numberStyle" : "PKNumberStyleSpellOut",
+        "label" : "spelled out",
+        "key" : "numberStyle",
+        "value" : 200
+      },
+      {
+        "key" : "loc",
+        "label" : "localized to french",
+        "value" : "Oh my stars."
+      },
+      {
+        "label" : "in reals",
+        "key" : "currency",
+        "value" : 200,
+        "currencyCode" : "BRL"
+      },
+      {
+        "dateStyle" : "PKDateStyleFull",
+        "label" : "date full",
+        "key" : "dateFull",
+        "value" : "1980-05-07T10:00-05:00"
+      },
+      {
+        "label" : "time full",
+        "key" : "timeFull",
+        "value" : "1980-05-07T10:00-05:00",
+        "timeStyle" : "PKDateStyleFull"
+      },
+      {
+        "dateStyle" : "PKDateStyleShort",
+        "label" : "dateTime",
+        "key" : "dateTime",
+        "value" : "1980-05-07T10:00-05:00",
+        "timeStyle" : "PKDateStyleShort"
+      },
+      {
+        "dateStyle" : "PKDateStyleShort",
+        "label" : "rel style",
+        "key" : "relStyle",
+        "value" : "2012-04-24T10:00-05:00",
+        "isRelative" : true
+      }
+    ]
+  }
+}
