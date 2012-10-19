@@ -8,7 +8,6 @@ spec/dummy/config/initializers/passbook.rb
 spec/dummy/public
 spec/dummy/spec
 spec/dummy/config/locales/database.yml
-spec/dummy/app/models/medication.rb
 .DS_Store
 *.swp
 *.swo
